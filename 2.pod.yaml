@@ -1,0 +1,14 @@
+apiVersion:	v1 
+kind: Pod
+metadata:
+  name: vote-pod
+  namespace: jestebangl
+  labels:
+    app: vote 
+spec:
+  containers: 
+    - name: app
+      image: schoolofdevops/vote:v2
+      ports:								
+      - containerPort: 80
+        protocol: TCP
